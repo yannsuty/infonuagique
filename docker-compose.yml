@@ -6,6 +6,7 @@ services:
     restart: always
     volumes:
       - ./elasticsearch/data:/usr/share/elasticsearch/data/
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     environment:
       discovery.type: single-node
     ports:
